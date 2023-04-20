@@ -1,0 +1,23 @@
+extends index.pug
+include mixins/movieMap.pug
+
+block content
+    form(method="POST" action="/filterMovie")
+        select(name="year" placeholder="Search Year..." type="text")
+            option 2020 ~
+            option 2010 ~
+            option 2000 ~
+            option 1990 ~
+            option 1980 ~
+        select(name="rate" placeholder="Search Rating..." type="text")
+            option 9.0 ~
+            option 8.0 ~
+            option 7.0 ~
+            option 6.0 ~
+            option 5.0 ~
+            option 4.0 ~
+            option 3.0 ~
+            option 2.0 ~
+        input(type="submit" value="Search")
+    +movieMap(movies)
+        

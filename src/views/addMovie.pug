@@ -1,0 +1,10 @@
+extends index.pug 
+
+block content 
+    form(method="POST" action="/")
+        input(name="medium_cover_image" placeholder = "ImageURL")
+        input(name="title" placeholder = "Title" type="text")
+        input(name="year" placeholder = "Year" type="number")
+        input(name="genres" placeholder = "Genres" type="text")
+        textarea(name="synopsis" placeholder = "Synopsis" type="text" rows="6")
+        input(type="submit" value="Add New Movie")

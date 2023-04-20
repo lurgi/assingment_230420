@@ -1,0 +1,9 @@
+mixin movie(movie)
+    div 
+        if(movie.medium_cover_image)
+            img(src=`${movie.medium_cover_image}`, alt=`${movie.title}`)
+        h1 Title : #{movie.title}
+        h2 Rating : #{movie.rating}
+        h2 Year : #{movie.year}
+        h2 Genres : #{movie.genres}
+        h3=movie.synopsis

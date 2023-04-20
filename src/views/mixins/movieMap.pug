@@ -1,0 +1,7 @@
+mixin movieMap(movies)
+    a(href="/add-movie")
+            button Add Movie
+    each movie of movies
+            div
+                a(href=`/movie/${movie.id}`)
+                    h1=movie.title
