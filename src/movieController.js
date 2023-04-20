@@ -41,7 +41,12 @@ export const addMoviePage = (req, res) => {
   }
   if (req.method === "POST") {
     const movies = getMovies();
-    movies.unshift({ ...req.body, id: movies.length, rating: 0.0 });
+    movies.unshift({
+      ...req.body,
+      genres: req.body.genres.split(","),
+      id: movies.length,
+      rating: 0.0,
+    });
     return res.render("home", { pageTitle: "Movies", movies });
   }
 };
